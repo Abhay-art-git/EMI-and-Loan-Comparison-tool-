@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Loan EMI Comparison Tool</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+  const { jsPDF } = window.jspdf;
+</script>
+</head>
+<body>
+  <h1>Loan EMI Comparison Tool</h1>
+
+  <div class="form-container">
+    <label>Loan Amount: ₹ <input type="number" id="amount"></label>
+    <label>Interest Rate (% per annum): <input type="number" step="0.01" id="rate"></label>
+    <label>Loan Term (in years): <input type="number" id="term"></label>
+    <button onclick="calculateEMI()">Calculate EMI</button>
+  </div>
+
+  <div id="result"></div>
+  <div id="action-buttons" style="text-align:center; margin-top: 20px;">
+  <button onclick="copyResult()" class="action-btn">📋 Copy Result</button>
+  <button onclick="downloadPDF()" class="action-btn">⬇️ Download PDF</button>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
