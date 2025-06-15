@@ -1,0 +1,258 @@
+/* ======= Base Style ======= */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #e1bee7);
+  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 30px;
+  color: #4a148c;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 30px;
+  color: #6a1b9a;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+/* ======= Form Card ======= */
+.form-container {
+  background: #ffffff;
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+  border-top: 5px solid #8e24aa;
+  transition: transform 0.3s ease;
+}
+
+.form-container:hover {
+  transform: translateY(-3px);
+}
+
+.form-container label {
+  display: block;
+  margin: 18px 0 5px;
+  color: #4a148c;
+  font-weight: 600;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1.5px solid #ce93d8;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.form-container input:focus {
+  border-color: #7b1fa2;
+}
+
+button {
+  display: inline-block;
+  background: linear-gradient(to right, #7b1fa2, #ce93d8);
+  color: white;
+  font-weight: 600;
+  border: none;
+  padding: 14px 0;
+  width: 100%;
+  margin-top: 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.4s ease;
+}
+
+button:hover {
+  background: linear-gradient(to right, #6a1b9a, #ba68c8);
+}
+
+/* ======= Table ======= */
+table {
+  width: 95%;
+  max-width: 900px;
+  margin: 30px auto;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+th {
+  background-color: #6a1b9a;
+  color: white;
+  padding: 15px;
+  font-size: 16px;
+}
+
+td {
+  padding: 15px;
+  text-align: center;
+  font-size: 15px;
+  color: #555;
+}
+
+tr:nth-child(even) {
+  background-color: #f3e5f5;
+}
+
+tr:hover {
+  background-color: #fce4ec;
+  transition: background-color 0.2s;
+}
+
+/* ======= Chart ======= */
+canvas {
+  display: block;
+  max-width: 900px;
+  width: 90%;
+  margin: 40px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.07);
+}
+
+/* ======= Responsive ======= */
+@media screen and (max-width: 768px) {
+  .form-container {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  th, td {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  button {
+    font-size: 15px;
+  }
+}
+
+
+/* ===== EMI Result Card ===== */
+.result-card {
+  background: linear-gradient(to right, #f3e5f5, #ede7f6);
+  border-left: 6px solid #7b1fa2;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+  margin: 30px auto;
+  max-width: 500px;
+  font-size: 16px;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.result-card h3 {
+  margin: 0 0 15px;
+  font-size: 1.5rem;
+  color: #6a1b9a;
+  text-align: center;
+}
+
+.result-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px dashed #ccc;
+}
+
+.result-row:last-child {
+  border-bottom: none;
+}
+
+.label {
+  font-weight: 600;
+  color: #4a148c;
+}
+
+.value {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.emi {
+  color: #1b5e20;
+}
+
+.interest {
+  color: #e65100;
+}
+
+.total {
+  color: #0d47a1;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ========== Action Buttons Container ========== */
+#action-buttons {
+  text-align: center;
+  margin-top: 25px;
+}
+
+/* ========== Common Button Style ========== */
+.action-btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 22px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  letter-spacing: 0.5px;
+}
+
+/* Copy Button */
+.copy-btn {
+  background: linear-gradient(135deg, #4a148c, #7b1fa2);
+}
+
+.copy-btn:hover {
+  background: linear-gradient(135deg, #6a1b9a, #9c27b0);
+  transform: translateY(-1px);
+}
+
+/* Download PDF Button */
+.pdf-btn {
+  background: linear-gradient(135deg, #00695c, #26a69a);
+}
+
+.pdf-btn:hover {
+  background: linear-gradient(135deg, #004d40, #00bfa5);
+  transform: translateY(-1px);
+}
+
+
+
